@@ -1,42 +1,58 @@
 'use strict';
 
-// user require with a reference to bundle the file and use it in this file
-// var example = require('./example');
-
-// use require without a reference to ensure a file is bundled
-
 require('../../lib/router.js');
-let abouthandle = require('./about.handlebars');
 
-let router = new Router["default"]();
+const router = new Router["default"]();
 
 router.map(function(match) {
-  // match("/posts").to("postIndex");
+  match('/').to('home');
   match('/about').to('about');
-  // match('/abouts').to(abouthandle);
 });
 
 let myHandlers = {};
 //
 myHandlers.about = {
   model: function(params) {
-    debugger;
-    // return App.Post.findAll();
-    return "TEST";
+    let abouthandle = require('./handlebars/about.handlebars');
+    // returing template to setup
+    return abouthandle;
   },
-
-  setup: function(posts) {
-    debugger;
-    // render a template with the posts
-    $('body').html(posts);
+  setup: function(page) {
+    // loading template in page
+    $('#main-content').html(page);
   }
 };
+
+myHandlers.home = {
+  model: function(params) {
+    let home = require('./handlebars/home.handlebars');
+    return home;
+  },
+  setup: function(page) {
+    $('#main-content').html(page);
+  }
+};
+
+
 //
 router.getHandler = function(name) {
-  debugger;
+  window.location.hash = `#/${name}`;
   return myHandlers[name];
 };
 
-debugger;
-// let t = router.handleURL('/about');
-debugger;
+$('.about').on('click', function(e){
+  e.preventDefault();
+  router.handleURL('/about');
+});
+
+$('.home').on('click', function(e){
+  e.preventDefault();
+  router.handleURL('/');
+});
+
+router.handleURL('/');
+
+$(window).on('hashchange', function() {
+  let windowhash = (window.location.hash).substring(1);
+  router.handleURL(windowhash);
+});

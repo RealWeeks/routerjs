@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "jquery": "^2.2.2",
+    "location-bar": "^2.1.0",
     "resp": "0.0.0",
     "route-recognizer": "^0.1.11",
     "rsvp": "^3.2.1"
