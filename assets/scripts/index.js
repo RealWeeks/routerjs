@@ -6,34 +6,29 @@
 // use require without a reference to ensure a file is bundled
 
 require('../../lib/router.js');
+let abouthandle = require('./about.handlebars');
 
 let router = new Router["default"]();
 
 router.map(function(match) {
   // match("/posts").to("postIndex");
   match('/about').to('about');
-  debugger;
+  // match('/abouts').to(abouthandle);
 });
-debugger;
-// debugger;
-// router.map(function() {
-//   debugger;
-//   this.route('about', { path: '/about' });
-//   this.route('favorites', { path: '/favs' });
-// });
-
 
 let myHandlers = {};
 //
 myHandlers.about = {
   model: function(params) {
     debugger;
-    return App.Post.findAll();
+    // return App.Post.findAll();
+    return "TEST";
   },
 
   setup: function(posts) {
     debugger;
     // render a template with the posts
+    $('body').html(posts);
   }
 };
 //
@@ -41,3 +36,7 @@ router.getHandler = function(name) {
   debugger;
   return myHandlers[name];
 };
+
+debugger;
+// let t = router.handleURL('/about');
+debugger;
