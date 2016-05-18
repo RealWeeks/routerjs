@@ -16,7 +16,6 @@ let RouteHandlers = require('./routing/handlers.js')
 
 RouteHandlers(router);
 
-//
 router.getHandler = function(name) {
   window.location.hash = `#/${name}`;
   return myHandlers[name];

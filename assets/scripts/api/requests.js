@@ -1,5 +1,5 @@
 'use strict';
-let getAbout = function(stuff){
+let getAbout = function(param){
   // let root = 'http://book-json.herokuapp.com';
 
   // $.ajax({
@@ -8,7 +8,7 @@ let getAbout = function(stuff){
   // }).then(function(data) {
   //   let abouthandle = require('../handlebars/about.handlebars');
   //   $('#main-content').html(abouthandle);
-  //   // debugger;
+  //
   //
   // });
     let abouthandle = require('../handlebars/about.handlebars');
