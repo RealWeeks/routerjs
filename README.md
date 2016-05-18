@@ -38,14 +38,18 @@ By the end of this, developers should be able to:
     this repository.
 1.  Install dependencies with `npm install`.
 
-## Follow Along: Investigating the Router
+## Demo: Investigating the Router
 
 -   Go through home and about routes, and how they work
 -   Create a Cats Route
+-   Explain click handler not necessary unless click event (when to and when
+    not to use)
+-   Create cat button to change view state
 
 ## Lab: Adding your own route
 
 -   Create "Book" route
+-   Create click to change view state
 -   Populate page with handlebars template
 
 ## Demo: Connecting an API
