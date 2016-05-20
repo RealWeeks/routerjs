@@ -8,12 +8,11 @@ router.map(function(match) {
   match('/').to('home');
   match('/home').to('home');
   match('/about').to('about');
-  match('/cats').to('cats');
 });
 
 
-let myHandlers = require('./routing/router.js')
-let RouteHandlers = require('./routing/handlers.js')
+let myHandlers = require('./routing/router.js');
+let RouteHandlers = require('./routing/handlers.js');
 
 RouteHandlers(router);
 
@@ -26,7 +25,7 @@ router.getHandler = function(name) {
 
 router.handleURL('/');
 
-window.onpopstate = function(e){
+window.onpopstate = function(){
   let windowhash = (window.location.hash).substring(1);
   router.handleURL(windowhash);
 };

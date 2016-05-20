@@ -8,11 +8,6 @@ const RouteHandlers = function(router){
     e.preventDefault();
     router.handleURL('/');
   });
-
-  $('.cats').on('click', function(e){
-    e.preventDefault();
-    router.handleURL('/cats');
-  });
 }
 
 module.exports = RouteHandlers;
