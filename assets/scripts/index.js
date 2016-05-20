@@ -8,6 +8,7 @@ router.map(function(match) {
   match('/').to('home');
   match('/home').to('home');
   match('/about').to('about');
+  match('/cats').to('cats');
 });
 
 

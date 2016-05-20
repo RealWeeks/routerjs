@@ -56,11 +56,59 @@ By the end of this, developers should be able to:
 
 ## Demo: Investigating the Router
 
--   Go through home and about routes, and how they work
--   Create a Cats Route
--   Explain click handler not necessary unless click event (when to and when
-    not to use)
--   Create cat button to change view state
+Please watch as I create a cats route.  You can follow along on your machine
+if it helps but you will be creating your own route shortly, so feel free to
+watch.
+
+### Creating a Route (for Cats)
+
+I'm going to start by adding a button to my navbar so I can easily access my
+route then I'm going to attach a click event to it.  Creating a button isn't
+necessary for the route but it makes it easy to test and makes for a more
+understandable demo.
+
+In my HTML I'm going to add the following code to my navbar:
+
+```html
+<li><a class="cats">Cats</a></li>
+```
+
+Cool, so now I have a line item, let's register an event. In
+`scrips/routing/handlers.js` I'm going to add the code, there should only be
+one line that you are unfamilar with:
+
+```js
+$('.cats').on('click', function(e){
+  e.preventDefault();
+  router.handleURL('/cats');
+});
+```
+
+If we put a debugger inside of our click handler we can see that the click is
+being registered.  Inside of our click handler we tell the router to handle the
+URL for `/cats` but we have yet to tell our router to map the `/cats` route.
+
+Building on the code that is already in our `index.js`. Let's add to the
+router.map function in the same pattern as the other routes.
+
+Using the same pattern I'm going to match the cats route:
+
+```js
+match('/cats').to('cats');
+```
+
+Now when we click the `cats` button in our navbar we can see the URL change.
+
+The URL changes, which is all well and good but we're not quite there yet. I
+want to change the content that appears in my main div, which in this case is
+is a div with an ID of `main-content`.
+
+___Please note that you do not need to limit yourself to only changing divs___
+___this can be applied to classes, entired pages or just components that___
+___make up a page.___
+
+`scripts/routing/router.js` is where I'm going to write the code that will
+change the content.
 
 ## Lab: Adding your own route
 
