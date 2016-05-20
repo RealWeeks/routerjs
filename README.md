@@ -16,6 +16,9 @@ instead of having to send entire pages from the server to the client we can send
 smaller bits of data (like JSON) and let the client side handle the job of
 rendering.
 
+Router.js is a lightweight router that is used in ember. We have included the
+router in this template for your use.
+
 ## Prerequisites
 
 -   Javascript
@@ -37,6 +40,19 @@ By the end of this, developers should be able to:
 1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
     this repository.
 1.  Install dependencies with `npm install`.
+
+## Lab: Exploring Router.js
+
+-   Take some time groups of two or three and explore all of the files and
+    folders in the scripts directory.
+
+-   After looking through the files run `grunt serve` in the root of the
+    directory to fire up your grunt server and navigate to `localhost:8080`. If
+    there were parts of the code you didn't understand use `debugger` statements
+    to clarify your understanding.
+
+-   Be ready to answer questions to on what is happening with the router.  Also
+    where you would write various pieces of your code.
 
 ## Demo: Investigating the Router
 
