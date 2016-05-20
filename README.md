@@ -5,18 +5,18 @@
 Why a router?  Shouldn't this go on the back end?
 
 Before the advent of the SPA, the job of serving pages was left to the server
-side of the equation (think rails views).  You would make a request and the
+side of the equation (think Rails views).  You would make a request and the
 server would handle populating and delivering a view to the client.
 
-Fast forward a number of years where browsers are more advnaced, the internet is
+Fast forward a number of years where browsers are more advanced, the internet is
 faster and users expect quick results.  A front end router lets us handle state
-changes more efficently.  Instead of having to rerender and entire page we can
+changes more efficiently.  Instead of having to rerender and entire page we can
 only chose to change what we need. We can also serve more information faster so
 instead of having to send entire pages from the server to the client we can send
 smaller bits of data (like JSON) and let the client side handle the job of
 rendering.
 
-Router.js is a lightweight router that is used in ember. We have included the
+Router.js is a lightweight router that is used in Ember. We have included the
 router in this template for your use.
 
 ## Prerequisites
@@ -32,7 +32,7 @@ By the end of this, developers should be able to:
 -   Create a router using Router.js
 -   Properly map routes
 -   Create click events that navigate between view states
--   Render data retrived from an API based on a route
+-   Render data retrieved from an API based on a route
 -   Render handlebars templates based on routes populated with API payload.
 
 ## Preparation
@@ -56,7 +56,7 @@ By the end of this, developers should be able to:
 
 ## Demo: Investigating the Router
 
-Please watch as I create a cats route.  You can follow along on your machine
+Please watch as I create a cat's route.  You can follow along on your machine
 if it helps but you will be creating your own route shortly, so feel free to
 watch.
 
@@ -75,7 +75,7 @@ In my HTML I'm going to add the following code to my navbar:
 
 Cool, so now I have a line item, let's register an event. In
 `scrips/routing/handlers.js` I'm going to add the code, there should only be
-one line that you are unfamilar with:
+one line that you are unfamiliar with:
 
 ```js
 $('.cats').on('click', function(e){
@@ -184,7 +184,7 @@ API endpoint: `http://jsonplaceholder.typicode.com/posts`
 -   On the books "page" only add a place below the navbar but before the
     listing of all books, inside of that add a place to search for a single book based on ID.
 
--   Impliment the code that will display the result of a user searching for that
+-   Implement the code that will display the result of a user searching for that
     ID and display it in the special space you just created.
 
 ## Double Bonus
