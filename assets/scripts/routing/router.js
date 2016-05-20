@@ -18,4 +18,14 @@ myHandlers.home = {
   }
 };
 
+myHandlers.cats = {
+  model: function(params) {
+    let cats = require('../handlebars/cats.handlebars');
+    return cats;
+  },
+  setup: function(page) {
+    $('#main-content').html(page);
+  }
+};
+
 module.exports = myHandlers;

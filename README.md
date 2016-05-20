@@ -110,6 +110,31 @@ ___make up a page.___
 `scripts/routing/router.js` is where I'm going to write the code that will
 change the content.
 
+Using `myHandler.home` as the basis for how we are going to finish our `cats`
+route we're going to create a `myHandlers.cats`
+
+```js
+myHandlers.cats = {
+  model: function(params) {
+    // define template
+    return // return template (+ more work if needed)
+  },
+  setup: function(page) {
+    // do additional page setup here if necessary
+    $('#main-content').html(page);
+  }
+};
+```
+
+Since we're following along we can see that we are going to need to create a
+template to load. Let's create one named `cats.handlebars` in the handlebars
+directory.  And just for now I'm going to populate that with some [Cat Ipsum](http://www.catipsum.com/index.php).
+
+Now that the handlebars template has been created I can define and return my
+template in the `myHandlers.cats` object I created in `scripts/routing/router.js`.
+
+Now we can test out everything to make sure it's working.
+
 ## Lab: Adding your own route
 
 -   Create "Book" route

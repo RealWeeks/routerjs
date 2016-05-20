@@ -10,7 +10,6 @@ const RouteHandlers = function(router){
   });
 
   $('.cats').on('click', function(e){
-    debugger;
     e.preventDefault();
     router.handleURL('/cats');
   });
