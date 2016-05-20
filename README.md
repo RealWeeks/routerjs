@@ -126,6 +126,8 @@ myHandlers.cats = {
 };
 ```
 
+**Note: The way the Router.js is implemented it calls the model function and the** **return value of that is passed to setup.**
+
 Since we're following along we can see that we are going to need to create a
 template to load. Let's create one named `cats.handlebars` in the handlebars
 directory.  And just for now I'm going to populate that with some [Cat Ipsum](http://www.catipsum.com/index.php).
