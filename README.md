@@ -198,9 +198,7 @@ OR
 
 ## Additional Resources
 
--   Stuff
--   Goes
--   Here
+-   [Router.js](https://github.com/tildeio/router.js/)
 
 ## [License](LICENSE)
 
