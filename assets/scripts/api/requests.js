@@ -6,13 +6,15 @@ let getAbout = function(param){
   //   url: root + '/books/4',
   //   method: 'GET'
   // }).then(function(data) {
-  //   let abouthandle = require('../handlebars/about.handlebars');
-  //   $('#main-content').html(abouthandle);
+  //
+  // Bind data to template
+  //
+  // return compiled template
   //
   //
   // });
     let abouthandle = require('../handlebars/about.handlebars');
-    $('#main-content').html(abouthandle);
+    return abouthandle;
 };
 
 module.exports = {getAbout};

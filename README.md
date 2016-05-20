@@ -104,7 +104,7 @@ want to change the content that appears in my main div, which in this case is
 is a div with an ID of `main-content`.
 
 ___Please note that you do not need to limit yourself to only changing divs___
-___this can be applied to classes, entired pages or just components that___
+___this can be applied to classes, entire pages or just components that___
 ___make up a page.___
 
 `scripts/routing/router.js` is where I'm going to write the code that will
@@ -143,13 +143,58 @@ Now we can test out everything to make sure it's working.
 
 ## Demo: Connecting an API
 
--   Connect Cats template to route
--   Change template to handle API payload
+Now that we are able to serve up a template base on the URL let's now deal
+with an API payload.  Once again you do not have to code along but you may if
+you find it helps your understanding.
+
+In the last demo and then the lab we went through the steps to create a
+functioning route that loads a template.  Let's take a quick look at the `about`
+route and see what is happening.
+
+We're going to skip to the part where were dealing with the route handlers in
+`scripts/routing/router.js`.
+
+In the `myHandler.about` object we can see that the model contains a callback
+reffering to a commented ajax call in `scripts/api/requests.js`.  With some
+slight tinkering we can call out to our API and return some data.
+
+In the interest of time I am not going to create a handlebars template to
+handle the API payload but you will do something similar in the next lab.
+
+__Best practice is to handle your data in the model and setup your page in__
+__setup.__
+
+You can see in `scripts/routing/router.js` in the `myHandlers.about` object that
+actually append the template in the `setup` function.
 
 ## Lab: Connecting an API
 
--   Connect Books template to route
--   Change template to handle API payload
+Using the following site for dummy JSON please perform the following steps:
+
+API endpoint: `http://jsonplaceholder.typicode.com/posts`
+
+-   Change "Book" template to handle API payload
+-   Change view state so when you click "Book" in the navbar (you have to add
+    this yourself) it displays all of the books.
+
+## Bonus Challenge
+
+-   Change the page layout and color-scheme based on what "page" the user is on.
+
+-   On the books "page" only add a place below the navbar but before the
+    listing of all books, inside of that add a place to search for a single book based on ID.
+
+-   Impliment the code that will display the result of a user searching for that
+    ID and display it in the special space you just created.
+
+## Double Bonus
+
+-   After doing the above, try to do it without having the location hash change.
+
+OR
+
+-  After doing the above, try to do the same but with a nested route, so it
+   would looks something like `localhost:8080/book/:id`
 
 ## Additional Resources
 

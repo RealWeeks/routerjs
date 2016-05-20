@@ -1,10 +1,13 @@
-const Requests = require('../api/requests.js')
+const Requests = require('../api/requests.js');
 
 let myHandlers = {};
 
 myHandlers.about = {
   model: function(params) {
-    Requests.getAbout();
+    return Requests.getAbout();
+  },
+  setup: function(page){
+    $('#main-content').html(page);
   }
 };
 
