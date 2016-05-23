@@ -126,7 +126,8 @@ myHandlers.cats = {
 };
 ```
 
-**Note: The way the Router.js is implemented it calls the model function and the** **return value of that is passed to setup.**
+**Note: The way the Router.js is implemented it calls the model function and**
+**the return value of that is passed to setup.**
 
 Since we're following along we can see that we are going to need to create a
 template to load. Let's create one named `cats.handlebars` in the handlebars
